@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root{
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --light-magenta-txt: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.1em;
+}
+
+.border-rad{
+    border-radius: 10px;
+}
+
+.lh-large{
+    line-height: 1.3rem;
+}
+
+.magenta-txt{
+    color: var(--very-dark-magenta);
+}
+
+.pink-txt{
+    color: var(--soft-pink);
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.splitItems{
+    justify-content: space-between;
+}
+
+.splitHalf{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main{
+    padding: 50px 10% 0;
+    margin-bottom: 100px;
+}
+
+#intro{
+    padding-right: 25%;
+}
+
+h1{
+    font-size: 3.5rem;
+}
+
+h1 span{
+    font-size: 1.2em;
+}
+
+#ratings{
+    padding-top: 65px;
+}
+
+.rating{
+    background-color: var(--light-grayish-magenta);
+    padding: 5px min(30px, 5%);
+    align-items: center;
+    margin: 10px 0;
+}
+
+.rating p{
+    font-weight: 700;
+    color: var(--very-dark-magenta);
+    margin-left: 6%;
+}
+
+.stars{
+    flex-shrink: 0;
+}
+
+.stars img{
+    display: inline-block;
+    width: 15px;
+    margin: 0 1px;
+}
+
+.rating:nth-of-type(1){
+    margin-right: 20%;
+}
+
+.rating:nth-of-type(2){
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.rating:nth-of-type(3){
+    margin-left: 20%;
+}
+
+.reviews{
+    gap: 3%;
+    margin-top: 60px;
+}
+
+.review{
+    background-color: var(--very-dark-magenta);
+    color: var(--light-grayish-magenta);
+    padding: min(30px, 10%);
+    height: fit-content;
+}
+
+.review .reviewer{
+    align-items: center;
+    gap: 5%;
+}
+
+.review img{
+    border-radius: 100%;
+    width: 45px;
+}
+
+.review .reviewer p{
+    margin: 4px;
+}
+
+.review:nth-of-type(2){
+    margin-top: 15px;
+}
+
+.review:nth-of-type(3){
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 925px) {
+    .row{
+        flex-wrap: wrap;
+    }
+
+    .splitHalf{
+        grid-template-columns: 1fr;
+    }
+
+    #intro, #ratings{
+        padding: 0;
+        text-align: center;
+    }
+
+    .rating{
+        margin: 15px 0 !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .rating{
+        justify-content: center;
+    }
+
+    .rating  p{
+        flex-basis: 100%;
+        margin-left: 0;
+    }
+
+    .stars{
+        margin-top: 1rem;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+}
